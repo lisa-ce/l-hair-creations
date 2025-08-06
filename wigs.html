@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Wig Collection - Lisa's Hair Vault</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff6f9;
+    }
+
+    header {
+      background-color:  hsl(3, 78%, 66%);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      color:  hsl(3, 78%, 66%);
+    }
+
+    .wig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 1rem 2rem 3rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .wig-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .wig-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .wig-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .wig-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .wig-info h2 {
+      margin: 0.5rem 0;
+      color: hsl(3, 78%, 66%);
+    }
+
+    .wig-info p {
+      margin: 0.3rem 0;
+    }
+
+    .buy-btn {
+      margin-top: 0.5rem;
+      background-color: hsl(3, 78%, 66%);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color:  hsl(3, 78%, 66%);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0.5rem 1rem 0 0;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">L-Hair Creations</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="wigs.html">Wigs</a>
+    </nav>
+  </header>
+
+  <h1>Our Wig Collection</h1>
+
+  <section class="wig-grid">
+    <!-- Wig 1 -->
+    <div class="wig-card">
+      <img src="https://articles.connectnigeria.com/wp-content/uploads/2022/04/81B9iif82S._SL1500_.jpg" alt="Straight Wig" />
+      <div class="wig-info">
+        <h2>Straight Wig</h2>
+        <p>22" Inches</p>
+        <p>N$1200</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Wig 2 -->
+    <div class="wig-card">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.zlgcuZXcFLPkhS8eu6TvuAHaHa?w=750&h=750&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Curly Bob" />
+      <div class="wig-info">
+        <h2>Curly Bob</h2>
+        <p>12" Inches</p>
+        <p>N$2085</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Wig 3 -->
+    <div class="wig-card">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.zlgcuZXcFLPkhS8eu6TvuAHaHa?w=750&h=750&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Body Wave" />
+      <div class="wig-info">
+        <h2>Body Wave</h2>
+        <p>24" Inches</p>
+        <p>N$1150</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

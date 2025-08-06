@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lisa's Hair Vault</title>
+  <link rel="stylesheet" href="myStyling.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header id="header">
+    <nav id="nav-bar">
+      <div class="logo-container">
+        <img
+          src="https://th.bing.com/th/id/R.eea66b12a9e405de38901ea0940e544c?rik=seQZyG03VtXNVA&pid=ImgRaw&r=0"
+          alt="hair-logo"
+          id="header-image"
+        />
+        <span class="the-product">L-HairCreations</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="wigs.html" class="nav-link">Wigs</a></li>
+        <li><a href="#audio" class="nav-link">Free Coupon shipping</a></li>
+        <li><a href="#for_sale" class="nav-link">For Sale</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="email-section">
+    <h2>Beautifully Curated wigs just for you</h2>
+    <form action="form" id="form">
+      <input
+        type="email"
+        required
+        placeholder="Enter your email address"
+        name="email"
+        id="email"
+      />
+      <input type="submit" id="submit" value="Get started" />
+    </form>
+  </section>
+
+  <section id="features">
+    <div class="features">
+      <div class="feature">
+        <i class="ri-file-paper-fill ri-4x icon"></i>
+        <h2>Premium Hair</h2>
+        <p>
+          Our hair is 100% human and use the best locally sourced cosmetics, increasing the
+          longevity of your purchase.
+        </p>
+      </div>
+      <div class="feature">
+        <i class="ri-truck-line ri-4x icon"></i>
+        <h2>Fast Shipping</h2>
+        <p>
+          Your product is shipped within a day — and sometimes even within
+          hours. How cool is that?
+        </p>
+      </div>
+      <div class="feature">
+        <i class="ri-verified-badge-fill ri-4x icon"></i>
+        <h2>Trusted Quality</h2>
+        <p>
+          If you're thinking quality, you're thinking of us — and you're right
+          to!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-section">
+    <div class="video-wrapper">
+      <iframe 
+        width="400" 
+        height="225" 
+        src="https://www.youtube.com/embed/b-MocTJLzOk?si=iZpQvqLGi3uVnbZK" 
+        title="YouTube video" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+  <section id="for_sale">
+  <h2 style="text-align:center; margin-bottom: 2rem;">Hair Collection</h2>
+  <div class="features">
+    <div class="feature">
+      <img src="https://articles.connectnigeria.com/wp-content/uploads/2022/04/81B9iif82S._SL1500_.jpg" alt="Straight Wig" style="width:100%; border-radius:10px;">
+      <h2>Straight Wig</h2>
+      <p>N$1200 - 22” Inches</p>
+    </div>
+    <div class="feature">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.zlgcuZXcFLPkhS8eu6TvuAHaHa?w=750&h=750&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Curly Bob" style="width:100%; border-radius:10px;">
+      <h2>Curly Bob</h2>
+      <p>N$2085 - 12” Inches</p>
+    </div>
+    <div class="feature">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.zlgcuZXcFLPkhS8eu6TvuAHaHa?w=750&h=750&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Body Wave" style="width:100%; border-radius:10px;">
+      <h2>Body Wave</h2>
+      <p>N$1150 - 24” Inches</p>
+    </div>
+  </div>
+</section>
+<script>
+  const form = document.getElementById("form");
+  const emailInput = document.getElementById("email");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop form from submitting anywhere
+
+    const email = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Remove any old message
+    let oldMessage = document.getElementById("form-message");
+    if (oldMessage) oldMessage.remove();
+
+    const message = document.createElement("p");
+    message.id = "form-message";
+    message.style.marginTop = "1rem";
+    message.style.fontWeight = "500";
+
+    if (!emailRegex.test(email)) {
+      message.textContent = "⚠️ Please enter a valid email address.";
+      message.style.color = "red";
+    } else {
+      message.textContent = "Thank you! We'll be in touch shortly.";
+      message.style.color = "peach";
+      form.reset(); // Clear form
+    }
+
+    form.appendChild(message);
+  });
+</script>
+
+</body>
+</html>
+
+
+
